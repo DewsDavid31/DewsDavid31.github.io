@@ -1,3 +1,7 @@
+
+body{
+  background-color:#666666;
+}
 .reveal{
   position: relative;
   transform: translateY(150px);
