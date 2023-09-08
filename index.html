@@ -2,12 +2,30 @@
 <html lang="en">
     <head style="background-color:#666666;">
 	    <link rel="stylesheet" href="style.css">
-	    <script src="reveal.js"> </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>David Dews</title>
     </head>
     <body style="background-color:#666666;">
+	    <script>
+		    function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+	    </script>
 	<font color="#eeeeee">
         <header>
             <h1>David Dews</h1>
